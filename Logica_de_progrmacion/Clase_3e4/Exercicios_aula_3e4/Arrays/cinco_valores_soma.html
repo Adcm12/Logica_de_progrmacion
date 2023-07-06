@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //Desenvuelva un sistema que el usuario informa cindo numeros
+        //atraves de comando prompt
+        // exiba los valores informados y muestre la suma de esos valores
+
+        let numeros = []
+        let soma = 0
+        let contador = 0
+
+
+        //leer los cinco e almacenar en una lista
+
+        while (contador < 5) {
+
+            let numero_usuario = parseInt(prompt('Informe ' + (contador + 1 ) + '° numero'))
+
+            //Soma a variable somar
+
+            soma = soma + numero_usuario
+
+            //Adicionar los numeros a la lista
+
+            numeros.push(numero_usuario)
+
+            //incrementando la variable contador para parar el lopop al llegar a 5
+            contador++
+        }
+
+        alert('La suma de todos los items es: ' + soma)
+        alert('Los items de la lista son: ' + numeros)
+
+
+
+
+    </script>
+    
+</body>
+</html>

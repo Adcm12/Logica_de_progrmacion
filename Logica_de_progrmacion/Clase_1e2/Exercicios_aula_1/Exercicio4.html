@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio4</title>
+</head>
+
+    <body>
+        <script>
+        
+//4: Crie um programa que leia um mês em formato de número (1 - 12) e printe em qual estação do ano o mês está. 
+//    OBS: 
+//   - Primavera = Setembro, Outubro,Novembro 
+//    - Verão = Dezembro, Janeiro, Fevereiro 
+//     - Outono = Março, Abril, Maio 
+//    - Inverno = Junho, Julho, Agosto
+
+        
+            document.write("Meses del año:  1) Enero;  2) Febrero; 3) Marzo;  4) Abril;  5) Mayo;  6) Junio;  7) Julio;  8) Agosto;  9) Septiembre;  10) Octubre;  11) Noviembre;   12) Diciembre;")
+            
+            let mes = parseInt(prompt("Informe un mes del año en número: "))
+            
+            if (mes == 12 || mes == 1 || mes == 2) {
+            
+                document.write("Este mes está en Verano")
+            
+            } else if (mes == 3 || mes == 4 || mes == 5) {
+            
+                document.write(" Este mes está en Otoño")
+                
+            } else if (mes == 6 || mes == 7 || mes == 8 ) {
+            
+                document.write("Este mes está en Invierno")
+                
+            } else if (mes == 9 || mes == 10 || mes == 11) {
+            
+                document.write("Este mes está en Primavera")
+                
+            } else {
+            
+                document.write("El número informado es incorrecto")
+                
+            }
+        
+        
+        
+        
+        </script>
+
+    </body>
+</html>

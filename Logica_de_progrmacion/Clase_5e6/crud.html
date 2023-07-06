@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de tareas</title>
+
+    <style>
+
+        body {
+            background-color: rgb(39, 154, 255);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 1;
+        }
+
+        button:hover {
+            scale: 1.2;
+            background-color: rgb(250, 254, 59);
+        }
+
+        button {
+
+            background-color: lightblue;
+            color: blue; 
+            padding-left: 5rem 2rem;
+
+            border-radius: 5%;
+            border-color: white;
+            /* margin-top: 1%; */
+
+            margin: 10px;
+            font-size: large;
+
+        }
+
+        input {
+
+            background-color: rgb(13, 93, 241);
+            margin: 10px;
+            padding: 1rem 1rem;
+            border-radius: 10%;
+            margin-top: 1%;
+        }
+
+        h1 {
+            background-color: rgb(60, 30, 234);
+            border: 1px solid skyblue;
+            font-size: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5%;
+        }
+
+        h1:hover{
+
+            scale: 1.2;
+            background-color: rgb(31, 9, 170);
+
+        }
+
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-element-left {
+            animation: slideInFromLeft 1s ease-in;
+        }
+
+    </style>
+
+    <!-- Usar font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link para buscar icones: https://fontawesome.com/v4/icons/#web-application -->
+
+</head>
+<body>
+
+    <!-- Botones para el CRUD -->
+    
+        <div class="animated-element-left">
+
+            <h1 style="color: black;"><i class="fa fa-address-book" aria-hidden="true"></i>Administrador de tarea</h1>
+
+            <input type="text" id="input_tarea">
+
+            <button id="Boton_crear"><i class="fa fa-file-o" aria-hidden="true"></i> Crear</button >
+
+            <button id="Boton_mostrar"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar</button>
+
+            <button id="Boton_actualizar"><i class="fa fa-upload" aria-hidden="true"></i> Actualizar</button>
+
+            <button id="Boton_eliminar"><i class="fa fa-folder" aria-hidden="true"></i> Eliminar</button>
+
+            <button onclick="location.reload()"><i class="fa fa-repeat" aria-hidden="true"></i>> Recargar</button>
+
+        </div>
+
+    <script>
+
+        //Conectar botones HTML con las funciones JS
+
+        document.getElementById('Boton_crear').addEventListener('click', crear_tarefa)
+        document.getElementById('Boton_mostrar').addEventListener('click', mostrar_tarea)
+        document.getElementById('Boton_actualizar').addEventListener('click', actualizar_datos)
+        document.getElementById('Boton_eliminar').addEventListener('click', eliminar_tarea)
+
+    //CRUD 
+    // Create 
+    // Read 
+    // Update 
+    // Delete
+
+        //Lista de tareas
+
+        let lista_tarea = []
+
+        // Crear tarea
+
+        function crear_tarefa() {
+
+            let tarea_nova = document.getElementById("input_tarea").value // value digita valor inserido en la variable
+            
+            //Verificar si fue informado un dato correcto
+
+            if (tarea_nova.length > 0){
+
+            //Adiccionar en la la lista de tareas
+
+                lista_tarea.push(tarea_nova)
+
+                alert('La tarea '+ tarea_nova + ' fue agregada')
+                document.getElementById("input_tarea").value = ''
+
+            } else {
+
+                alert('Informe una tarea valida')
+
+            }
+        }
+
+        //Mostrar datos al usuario
+
+        function mostrar_tarea() {
+            
+            // Verificar si existen item en la lista 
+
+            if (lista_tarea.length > 0) {
+
+                let tareas_almacenada = 'Lista de tareas almacenadas: \n'
+
+                //Adicinar todos los items de la lista a la variable tareas_almacenadas
+
+                for (let i = 0; i < lista_tarea.length; i++) {
+
+                    tareas_almacenada+= 'Tarea ' + i + ': ' + lista_tarea[i] + '\n'
+
+                }
+
+                alert (tareas_almacenada)
+
+            } else {
+
+                alert('No existen items todavia')
+            }
+
+        }
+
+        // Actualizar los datos
+
+        function actualizar_datos() {
+
+            //Usuario va a informar el item de la lista 
+
+            let posicion = parseInt(prompt('Informe la posicon de la tarea: '))
+
+            //Validar la posicion 
+
+            if (posicion >= 0 && posicion < lista_tarea.length){
+
+                //leer la tarea nueva
+
+                let tarea_nueva = prompt('Informe la tarea nueva: ')
+
+                if (tarea_nueva.length>0) {
+
+                    //Sobreescribir tarea
+
+                    lista_tarea[posicion] = tarea_nueva
+
+                } else {
+
+                    alert('Informe una tarea valida: ')
+                }
+            } else {
+
+                alert('Informe una posicion valida')
+            }
+
+        }
+
+        // Deletar tareas
+
+        function eliminar_tarea() {
+
+            //Leer la posicion
+            let posicion = parseInt(prompt('Informe la posicon de la tarea: '))
+
+            //Validad posicin
+            if (posicion >= 0 && posicion < lista_tarea.length){
+
+                let tarea_deletada = lista_tarea[posicion]
+
+                lista_tarea.splice(posicion, 1)
+
+                alert('La tarea ' + tarea_deletada + ' fue deleltada con exito')
+
+            } else {
+
+                alert('Informe una posicion valida')
+            }
+
+
+                //Deletar
+
+        }
+
+    </script>
+</body>
+</html>

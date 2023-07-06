@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio10</title>
+</head>
+
+    <body>
+        <script>
+        
+//10: Calcular o desconto em uma compra com base no valor total e na forma de pagamento. 
+//   Se a forma de pagamento for dinheiro haverá 10% de desconto, se for em cartão, 5%.
+
+            let valor_total = parseInt(prompt("Informa el valor total de la compra: "))
+            
+            let forma_pago = parseInt(prompt("Informe la forma de pagamento: 1) Dinero;  2) Tarjeta;   ")) 
+            
+            //Forma de pago dinero
+            
+            if (forma_pago == 1) {
+            
+               let descuento_dinero = (valor_total * 0.10)
+               let total_dinero = (valor_total -descuento_dinero)
+               
+               document.write("El descuento del 10%: es " + descuento_dinero.toFixed(2) + " el total a pagar es: " + total_dinero)
+               
+               //Forma de pago tarjeta
+               
+            } else if (forma_pago == 2) {
+            
+                let descuento_tarjeta = (valor_total * 0.05)
+                 let total_tarjeta = (valor_total -descuento_tarjeta)
+                 
+                document.write("El descuento por compra en tarjeta es: " + descuento_tarjeta.toFixed(2) + " el total es: " + total_tarjeta)
+                
+                
+            } else {
+                
+                alert("Ha ocurrido un error")
+            }
+
+
+                    
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function func_name(numero_ini, numero_final){
+            // varible para suma 
+            // variable para contador while
+            let contador = numero_ini
+            let suma_pares = 0
+
+            // usar el while en un  contador
+            while (contador <= numero_final){
+                // se eh par
+                if (contador % 2 === 0){
+                    suma_pares += contador
+                }
+                contador++
+            }
+            return suma_pares
+        }
+
+        let numero_ini = parseInt(prompt('Informe un numero: '))
+        let numero_funal = parseInt(prompt('Informe un numero: '))
+
+        let resultado = func_name(numero_ini, numero_final)
+
+        console.log(resultado)
+    </script>
+    
+</body>
+</html>

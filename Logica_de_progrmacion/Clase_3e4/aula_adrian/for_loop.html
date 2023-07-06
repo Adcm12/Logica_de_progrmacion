@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+
+    <script>
+
+        //  Váriavel ; Condição ; Increcemento 
+        // for (let i = 0; i <= 10; i++) {
+
+        //     if (i % 2 == 0) {
+
+        //         alert(i + ' es par' )
+
+        //     } else{
+
+        //         alert(i + ' es impar')
+        //     }
+        // }
+
+        let lista_numeros = [1, 24, 35, 44, 59]
+
+        let soma_pares = 0
+        let soma_impares = 0
+
+
+        for (let i = 0; i < lista_numeros.length; i++){
+
+            if (lista_numeros[i] % 2 == 0) {
+
+                soma_pares = soma_pares + lista_numeros[i]
+                
+            } else {
+
+                soma_impares = soma_impares + lista_numeros[i]
+
+            }
+        }
+
+        document.write(' Impares: ' + soma_impares)
+        document.write(' Pares: ' + soma_pares)
+
+        // loop para ver correr los elementos de la lista e calcular los elementos pares
+
+
+        
+    </script>
+
+
+    
+</body>
+</html>
