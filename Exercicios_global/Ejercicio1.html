@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1  Edad cumplida</title>
+</head>
+<body>
+
+    <script>
+
+        // Escribir un programa que pregunte al usuario 
+        // su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
+
+        const edad = parseInt(prompt("Ingrese su edad"));
+        let añosCumplidos = '';
+        
+         for(let i = 1; i <= edad; i++){
+
+             añosCumplidos += i + '\n';
+             }
+
+        console.log("Años cumplidos: \n" + añosCumplidos);
+
+    </script>
+    
+</body>
+</html>
