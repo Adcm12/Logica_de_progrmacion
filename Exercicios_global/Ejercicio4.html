@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+
+    <script>
+
+        // Escribir un programa que pida al usuario un número entero y muestre por pantalla un 
+        // triángulo rectángulo como el de más abajo, de altura el número introducido.
+
+        let altura = parseInt(prompt("Introduce la altura del triángulo (entero positivo): "));
+        for (let i = 0; i < altura; i++) {
+            
+            for (let j = 0; j <= i; j++) {
+
+                document.write("*");
+            }
+            
+            document.write("<br>");
+        }
+
+    </script>
+    
+</body>
+</html>
