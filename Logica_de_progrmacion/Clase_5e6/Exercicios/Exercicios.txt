@@ -1,9 +1,0 @@
-Exercicio 1) verificar si un numero es primo ( Usar if, for e funcion )
-
-Exercicio2) Contar cuantas veces una letra aparece en una string (usar if, for funcion)
-
-Exercicio3 ) Calcular la suma dos numeros pares en un intervalo (Usar if, while, funcion)
-
-
-
-
