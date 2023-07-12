@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio9</title>
+</head>
+
+    <body>
+        <script>
+        
+//9: Escreva um programa que leia a idade e o nome de 3 usuários distintos e printe a qual categoria eles pertencem. 
+//            Criança: 0-12 
+//            Adolescente: 13-19 
+//            Adulto: 20-64 
+//            Idoso: 65+ 
+
+            let nombre1 = prompt("Informe el nombre del primer usuario: ")
+            
+            let edad1 = parseInt(prompt("Informe la edad del primer usuario: "))
+            
+            let nombre2 = prompt ("Informe el nombre del segundo usuario: ")
+            
+            let edad2 = parseInt(prompt("Informe la edad del segundo usuario: "))
+            
+            let nombre3 = prompt ("Informe el nombre del tercer usuario: ")
+            
+            let edad3 = parseInt(prompt("Informe la edad del tercer usuario: "))
+            
+            //Primer usuario
+            
+            if (edad1 >= 0 && edad1 <= 12){
+                
+                document.write("El usuario " + nombre1 + " es un niño")
+                               
+            } else if (edad1 >= 13 && edad1 <=19){
+                
+                document.write("El usuario " + nombre1 + " es un joven. ")
+                
+            } else if (edad1 >= 20 && edad1 <=64){
+                
+                document.write("El usuario " + nombre1 + " es un adulto. ")
+                
+            } else if (edad1 >=65){
+                
+                document.write("El usuario " + nombre1 + " es un idoso. ")
+                
+            } else {
+                
+                document.write ("La edad de " + nombre1 + "no es correcta")
+                
+            }
+            
+            //Segundo usuario
+            
+            if (edad2 >= 0 && edad2 <= 12){
+                
+                document.write("El usuario " + nombre2 + " es un niño")
+                               
+            } else if (edad2 >= 13 && edad2 <=19){
+                
+                document.write("El usuario " + nombre2 + " es un joven. ")
+                
+            } else if (edad2 >= 20 && edad2 <=64){
+                
+                document.write("El usuario " + nombre2 + " es un adulto. ")
+                
+            } else if (edad2 >=65){
+                
+                document.write("El usuario " + nombre2 + " es un idoso. ")
+                
+            } else {
+                
+                document.write ("La edad de " + nombre2 + "no es correcta")
+                
+            }
+            
+            //Tercer usuario
+            
+            if (edad3 >= 0 && edad3 <= 12){
+                
+                document.write("El usuario " + nombre3 + " es un niño")
+                               
+            } else if (edad3 >= 13 && edad3 <=19){
+                
+                document.write("El usuario " + nombre3 + " es un joven. ")
+                
+            } else if (edad3 >= 20 && edad3 <=64){
+                
+                document.write("El usuario " + nombre3 + " es un adulto. ")
+                
+            } else if (edad3 >=65){
+                
+                document.write("El usuario " + nombre3 + " es un idoso. ")
+                
+            } else {
+                
+                document.write ("La edad de " + nombre3 + "no es correcta")
+                
+            }
+                    
+        </script>
+
+    </body>
+</html>

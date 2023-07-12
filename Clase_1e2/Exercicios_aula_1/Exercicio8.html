@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio8</title>
+</head>
+
+    <body>
+        <script>
+        
+//8: Leia dois números do usuário, verifique se os números são positivos, se forem printe a soma, a subtração a divisão, e a multiplicação dos dois números. Caso o número seja negativo, printe uma mensagem de aviso..
+
+            let num1 = parseInt(prompt( "Informe un número positivo: "))
+           
+            let num2= parseInt(prompt( "Informe otro número positivo: "))
+            
+            if (num1 > 0 && num2 >0){
+            
+                document.write("La suma de estos dos números es: " +(num1 + num2))
+                
+                document.write("La resta de estos dos números: " + (num1 - num2))
+                
+                document.write("La multiplicación de estos dos números es: "+ (num1 * num2))
+                
+                document.write("La división de estos dos números es: " + (num1 / num2))
+                
+            } else {
+                 alert("Uno de los numeros informados es negativo")
+                 
+            }
+            
+        
+        </script>
+
+    </body>
+</html>
